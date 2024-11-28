@@ -4,7 +4,7 @@ from std_msgs.msg import Int16
 
 rclpy.init()
 node = Node("talker")
-pub = node.create_publisher(Int16,"countup",10)
+pub = node.create_publisher(Int16, "countup", 10)
 n = 0
 
 
@@ -17,5 +17,5 @@ def cb():
 
 
 def main():
-    node.create_timer(0.5,cb)
+    node.create_timer(0.5, cb)
     rclpy.spin(node)
